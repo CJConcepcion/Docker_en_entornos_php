@@ -1,0 +1,26 @@
+version: '2'
+services:
+web:
+image: "alterway/php:5.4-apache"
+ports:
+-"8080:80"
+volumes:
+-ww:/var/www/html
+db:image: mysql/mysql-server:5.7
+ports: 
+-"3306:3306"
+environment:
+-MYSQL_USER=root
+-MYSQL_PASSWORD=docker
+-MYSQL_ROOT_PASSWORD=docker
+-MYSQL_DATABASE=mi_app
+phpmyadmin:
+image: phpmyadmin/phpmyadmin
+ports:
+-8081:80
+environment:MYSQL_USER: root
+MYSQL_PASSWORD: docker
+MYSQL_ROOT_PASSWORD: docker
+links:
+# for mysql container
+-db:db

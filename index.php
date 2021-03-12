@@ -14,19 +14,19 @@
 <body>
     <div width="80%" class="container">
 
-<?php echo "<h1>Hola! PHP 5 te saluda desde Docker</h1>"; ?>
+<?php echo "<h1>Hola! Haciendo mi primer Docker en entornos PHP</h1>"; ?>
 
 <form  action="" method="POST">
  	<input type="hidden" name="a" value="YES">
   <div class="form-group">
-    <label for="formGroupExampleInput">Programa</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" name="titulo" placeholder="T&iacute;tulo del programa" required="" >
+    <label for="formGroupExampleInput">Software</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" name="titulo" placeholder="Nombre del Software" required="" >
   </div>
   <div class="form-group">
-    <label for="exampleFormControlTextarea1">Utilidad</label>
+    <label for="exampleFormControlTextarea1">Funcionalidad</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" name="utilidad" rows="3" required=""></textarea>
   </div>
-  <button type="submit" class="btn btn-primary">Guardar</button>
+  <button type="submit" class="btn btn-primary">Salvar</button>
 </form>
 <hr>
 <?php
@@ -49,8 +49,8 @@ $result = mysqli_query($conn, $query);?>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>id</th><th>T&iacute;tulo</th>
-      <th>Utilidad</th>
+      <th>Identificador</th><th>Nombre</th>
+      <th>Funcionalidad</th>
     </tr>
   </thead>
 
